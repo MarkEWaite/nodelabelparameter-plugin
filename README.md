@@ -79,18 +79,18 @@ curl --silent -u USER:PASSWORD --show-error \
 
 If the [Parameterized Trigger Plugin](https://plugins.jenkins.io/parameterized-trigger/) is installed, an additional parameter is available to pass to the target job.
 The parameterized trigger plugin handles Node and Label parameters as every other parameter if you use the option 'Current build parameters'.
-But it is not possible to use the 'Predefined parameters' to overwrite such a parameter, therefore the NodeLabel Parameter plugin adds a new parameter to the trigger plugin.
+But it is not possible to use the 'Predefined parameters' to overwrite such a parameter, therefore the Node and Label Parameter plugin adds a new parameter to the trigger plugin.
 
 This parameter type defines where the target job should be executed.
 The value must match either a label or a node name - otherwise the job will just stay in the queue.
-The NodeLabel parameter passed to the target job does not have to exist on the target job (but if the target has one defined, it should match the name).
+The node or label parameter passed to the target job does not have to exist on the target job (but if the target has one defined, it should match the name).
 This way it is possible to trigger jobs on different nodes than are actually configured.
 
 ![](images/parameterized-trigger-param.jpg)
 
-### BuildParameterFactory
+### Build parameter factory
 
-The nodelabel parameter plugin also adds a `BuildParameterFactory` to the parameterized trigger plugin.
+The Node and Label Parameter plugin also adds a `BuildParameterFactory` to the parameterized trigger plugin.
 This factory enables you to trigger a build of a specific project on all nodes having the same label.
 
 1.  Add the "Trigger/call builds on other projects" build step
