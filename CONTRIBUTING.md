@@ -40,9 +40,10 @@ The following commands will open the `index.html` file in the browser.
 The file will have a list of package names.
 Click on them to find a list of class names.
 
-The lines of the code will be covered in three different colors, red, green, and orange.
+The source code will be displayed in three different colors, red, green, and orange.
 Red lines are not covered in the tests.
-Green lines are covered with tests.
+Orange lines are partially covered by tests.
+Green lines are fully covered by tests.
 
 ## Reporting Issues
 
